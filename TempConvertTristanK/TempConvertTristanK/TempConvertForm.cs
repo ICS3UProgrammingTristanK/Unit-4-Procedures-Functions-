@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Created by: Tristan Kalabric
+ * Created on: November 15, 2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #30 - Temperature Converter
+ * This program converts celcius to farenheight by calling a procedure
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,14 +27,14 @@ namespace TempConvertTristanK
         public void ConvertToF(int celcius)
         {
             //Create variables
-            double Farenheight;
-            double celcius;
+            double farenheight;
+            celcius = Convert.ToInt16(this.txtCelcius.Text);
 
             //Calculate the temperature in Farenheight
-            Farenheight = (double) (9) / (double)(5) * celcius + 32;
+            farenheight = (double) (9) / (double)(5) * celcius + 32;
 
             //Display temperature in a Messagebox
-            MessageBox.Show(celcius + "degrees Celcius is: " + Farenheight + "degrees Farenheight");
+            MessageBox.Show(celcius + " degrees Celcius is: " + farenheight + " degrees Farenheight");
         }
 
         private void btnConvertToF_Click(object sender, EventArgs e)
@@ -37,8 +44,8 @@ namespace TempConvertTristanK
 
             //Convert the usercelcius to int and assign to variables
             userCelcius = Convert.ToInt16(this.txtCelcius.Text);
-            //Call function
-            this.ConvertToF(celcius);
+            //Call function ConvertToF
+            this.ConvertToF(userCelcius);
         }
     }
 }
